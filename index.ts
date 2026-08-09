@@ -18,7 +18,7 @@ interface ProcessedOrder {
   message: string;
 }
 
-const userDatabase: Record<number, UserData> = {
+const userDatabases: Record<number, UserData> = {
   1: { userId: 1, isPremium: true, lastOrderDate: new Date('2024-01-15') },
   2: { userId: 2, isPremium: false, lastOrderDate: null },
 };
@@ -28,7 +28,7 @@ const productDatabase: Record<number, { stock: number; price: number }> = {
 };
 
 const calculateLoyaltyDiscount = (userId: number, totalAmount: number): number => {
-  const user = userDatabase[userId];
+  const user = userDatabases[userId];
   if (!user) return 0;
 
   if (totalAmount > 499) {
