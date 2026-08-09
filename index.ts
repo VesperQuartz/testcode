@@ -69,8 +69,6 @@ const processUserOrder = async (
   userId: number,
   items: OrderItem[]
 ): Promise<ProcessedOrder> => {
-  const user = userDatabase[userId];
-
   const subtotal = calculateSubtotal(items);
 
   let discount = calculateLoyaltyDiscount(userId, subtotal);
