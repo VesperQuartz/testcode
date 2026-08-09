@@ -25,8 +25,6 @@ const userDatabase: Record<number, UserData> = {
 
 const productDatabase: Record<number, { stock: number; price: number }> = {
   101: { stock: 5, price: 50 },
-  102: { stock: 10, price: 100 },
-  103: { stock: 0, price: 75 },
 };
 
 const calculateLoyaltyDiscount = (userId: number, totalAmount: number): number => {
